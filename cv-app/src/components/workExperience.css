@@ -1,0 +1,31 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.experience-container {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+  width: 15vw;
+  gap: 0.5vw;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.experience-container input,
+.experience-container textarea {
+  width: 90%;
+}
+
+input {
+  padding: 5px;
+}
+
+textarea {
+  max-width: 100%;
+  padding: 5px;
+}

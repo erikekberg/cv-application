@@ -1,0 +1,30 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  margin-left: 15px;
+  width: 30vw;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+
+.general-info-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.exp-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.general-info-container input,
+.general-info-container textarea {
+  padding: 10px;
+}
