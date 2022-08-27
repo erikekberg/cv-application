@@ -1,5 +1,5 @@
 import { Component } from "react";
-import WorkExperience from "./WorkExperience";
+import WorkExperienceInput from "./WorkExperienceInput";
 import "./infoSidebar.css";
 
 class InfoSidebar extends Component {
@@ -8,6 +8,7 @@ class InfoSidebar extends Component {
     this.state = {
       experience: [],
     };
+    this.key = 1;
   }
 
   render() {
@@ -16,22 +17,39 @@ class InfoSidebar extends Component {
         <div className="container">
           <div className="general-info-container">
             <label htmlFor="name">Full Name:</label>
-            <input type="text" id="name" />
+            <input
+              type="text"
+              id="name"
+              onChange={this.props.handleNameChange}
+            />
+            <label htmlFor="avatar">Profile Picture url:</label>
+            <input type="url" onChange={this.props.handleAvatarChange} />
             <label htmlFor="phonenumber">Phone Number:</label>
-            <input type="number" name="phonenumber" id="phonenumber" />
+            <input
+              type="number"
+              name="phonenumber"
+              id="phonenumber"
+              onChange={this.props.handlePhonenumberChange}
+            />
             <label htmlFor="email">Email:</label>
-            <input type="email" name="email" id="email" />
+            <input
+              type="email"
+              name="email"
+              id="email"
+              onChange={this.props.handleEmailChange}
+            />
             <label htmlFor="info">General Info:</label>
-            <textarea name="info" id="info" cols="30" rows="10"></textarea>
+            <textarea
+              name="info"
+              id="info"
+              cols="30"
+              rows="10"
+              onChange={this.props.handleGeneralInfoChange}
+            ></textarea>
           </div>
-          <div className="exp-container">
-            {this.state.experience.map((exp) => (
-              <WorkExperience />
-            ))}
-          </div>
-          <button onClick={() => this.addExperience()}>
-            Add Work Experience
-          </button>
+          <WorkExperienceInput
+            handleExperienceChange={this.props.handleExperienceChange}
+          />
         </div>
       </div>
     );
@@ -39,7 +57,7 @@ class InfoSidebar extends Component {
 
   addExperience() {
     this.setState({
-      experience: [...this.state.experience, <WorkExperience />],
+      experience: [...this.state.experience, <WorkExperienceInput />],
     });
   }
 }

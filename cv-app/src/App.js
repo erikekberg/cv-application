@@ -1,11 +1,7 @@
-import InfoSidebar from "./components/InfoSidebar";
+import Main from "./components/Main";
 
 function App() {
-  return (
-    <div>
-      <InfoSidebar />
-    </div>
-  );
+  return <Main />;
 }
 
 export default App;

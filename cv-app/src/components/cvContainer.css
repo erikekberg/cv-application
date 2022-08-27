@@ -1,0 +1,38 @@
+.cv-container {
+  margin: 10px;
+  width: 50vw;
+  height: calc(100vh - 20px);
+  border: 1px black solid;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+
+img {
+  height: 100px;
+  width: 100px;
+}
+
+.img-and-name {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.contact-info {
+  margin: 40px 0;
+}
+
+.exp-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.exp-wrapper div {
+  width: 20vw;
+}

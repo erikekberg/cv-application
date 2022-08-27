@@ -9,11 +9,23 @@
   display: flex;
   flex-direction: column;
   border: 1px solid black;
-  width: 15vw;
+  width: 30vw;
   gap: 0.5vw;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  height: auto;
+}
+
+.experience-container form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 5px;
+}
+
+.experience-container form button {
+  width: 90%;
 }
 
 .experience-container input,
@@ -28,4 +40,17 @@ input {
 textarea {
   max-width: 100%;
   padding: 5px;
+}
+
+.exp-cv {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+  width: 30vw;
+  gap: 0.5vw;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  height: auto;
 }
